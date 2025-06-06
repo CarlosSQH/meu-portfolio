@@ -1,0 +1,293 @@
+* {
+  box-sizing: border-box;
+}
+
+#corpo {
+  margin-left: 5%;
+  margin-right: 5%;
+  padding: 25px;
+  background-color: white;
+  box-shadow: 0px 1px 10px rgb(177, 177, 177);
+}
+
+#home {
+  margin-top: 5%;
+
+}
+
+#home p {
+  font-size: 14px;
+  font-weight: bold;
+  color: rgb(102, 102, 102);
+  width: 35%;
+}
+
+#home h1 {
+  font-family: "calibri";
+  font-weight: bold;
+  margin-bottom: 1px;
+}
+
+#home h2 {
+  font-family: "calibri";
+  font-size: 21px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+#cabecalho {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: rgb(0, 0, 0);
+  z-index: 1000;
+  box-shadow: 0px 0.5px 4px rgb(105, 105, 105);
+}
+
+#sobre {
+  margin-top: 2%;
+  font-size: 14px;
+  font-weight: bold;
+  color: rgb(70, 70, 70);
+  width: 55%;
+  margin-bottom: 10%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+
+}
+
+#sobre img {
+  width: 35%;
+
+}
+
+#sobre p {
+  font-size: 20px;
+
+
+}
+
+#habilidades {
+  margin-bottom: 10%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+#habilidades img {
+  width: 10%;
+  float: left;
+  margin-right: 30px;
+}
+
+#hab-tito {
+  justify-content: center;
+  align-self: center;
+  display: flex;
+  font-family: "calibri";
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+#desen-web {
+  padding: 10px;
+  border: 3px solid;
+  width: 70%;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.85)), url("/imagens/dev-web\ fundo.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 5px;
+}
+
+#desen-web p {
+  margin-top: 15px;
+  width: 60%;
+  margin-left: 85px;
+  text-align: center;
+}
+
+#analista {
+  padding: 10px;
+  border: 3px solid;
+  width: 70%;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.85)), url("/imagens//exel\ fundo.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#analista p {
+  margin-top: 15px;
+  width: 60%;
+  margin-left: 85px;
+  text-align: center;
+}
+
+#projetos-tito {
+  justify-content: center;
+  align-self: center;
+  display: flex;
+  font-family: "calibri";
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+#portfolio {
+  margin-bottom: 5%;
+  padding: 20px;
+  box-shadow: 0px 1px 7px rgb(228, 228, 228);
+  height: 500px;
+}
+
+#contatos {
+  margin-top: 70px;
+  box-shadow: 0px 1px 10px rgb(177, 177, 177);
+
+}
+
+#contatos a {
+  color: black;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+#contatos a:hover {
+  color: #0d6efd;
+}
+
+
+.navbar-brand {
+  font-family: arial;
+  font-weight: bold;
+}
+
+.navbar-brand:hover {
+  font-size: 20.5px;
+  color: rgb(30, 52, 250);
+}
+
+.hovercab {
+  font-weight: bold;
+  font-size: 15.5px;
+  color: rgb(54, 54, 54);
+}
+
+.hovercab:hover {
+  font-size: 17px;
+  color: rgb(30, 52, 250);
+  font-weight: bold;
+}
+
+.carrosel {
+  margin-left: 15%;
+  width: 350px;
+  height: 250px;
+  float: left;
+}
+
+.tito-carrosel {
+  margin-left: 55%;
+}
+
+.desc-carrosel {
+  margin-left: 55%;
+  width: 30%;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.visually {
+  color: black;
+  width: 100%;
+  margin-right: 10%;
+  font-size: 34px;
+  padding: 19px;
+}
+
+.botao-projeto {
+  margin-left: 24%;
+}
+
+
+p {
+  font-family: calibri;
+  font-weight: bold;
+}
+
+h1 {
+  font-family: "calibri";
+  font-weight: bold;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+}
+
+
+
+@media (max-width: 700px) {
+  #desen-web {
+    width: 95%;
+  }
+
+  #desen-web h1 {
+    font-size: 25px;
+  }
+
+  #desen-web p {
+    font-size: 15px;
+    margin-left: 25px;
+    width: 90%;
+  }
+
+  #analista {
+    width: 95%;
+  }
+
+  #analista p {
+    font-size: 14px;
+    margin-left: 25px;
+    width: 90%;
+  }
+
+  /*  Fim da aba habilidades  */
+
+  #portfolio {
+    display: block;
+  }
+
+  .carrosel {
+    margin-left: 15%;
+    width: 210px;
+    height: 170px;
+    float: none;
+
+
+  }
+
+  .tito-carrosel {
+    margin-left: 15%;
+    font-size: 22px;
+    margin-top: 15px;
+
+  }
+
+  .desc-carrosel {
+    margin-left: 20%;
+    width: 70%;
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  .visually {
+    color: black;
+    margin-right: 0;
+    font-size: 34px;
+  }
+
+  .botao-projeto {
+    margin-left: 15%;
+  }
+
+}

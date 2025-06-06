@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contate-me</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/estilos/estilos.css" />
+    <link rel="stylesheet" href="/estilos/contato.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" id="cabecalho">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/index.html" id="perfil"
+          >Perfil Profissional</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link hovercab" aria-current="page" href="#home"
+              >Home</a
+            >
+            <a class="nav-link hovercab" href="/index.html">Sobre Mim</a>
+            <a class="nav-link hovercab" href="/index.html">Habilidades</a>
+            <a class="nav-link hovercab" href="/index.html">Projetos</a>
+
+            <a class="nav-link hovercab" href="/index.html">Contato</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!--Fim Menu Boostrap-->
+    <div id="corpo">
+      <div id="home">
+        <h1>Contate-me</h1>
+
+        <form id="contatar">
+          <input type="text" id="nome" placeholder="Nome" required />
+          <input type="text" id="email" placeholder="E-mail" required />
+          <input type="text" id="mensagem" placeholder="Assunto" required />
+          <textarea
+            id="descricao"
+            cols="30"
+            rows="10"
+            placeholder="Descrição"
+            required
+          ></textarea>
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+      </div>
+    </div>
+
+    <footer id="contatos" class="bg-light text-dark pt-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 text-center mb-3">
+            <h5>Carlos Henrique S.B</h5>
+            <p>&copy;2025 Todos os direitos reservados</p>
+          </div>
+
+          <div class="col-md-4 text-center mb-3">
+            <h5>Contato</h5>
+            <p>
+              <a href="https://wa.me/79991214304" target="_blank">
+                <img src="/imagens/whatsapp.webp" alt="WhatsApp" width="20" />
+                WhatsApp: (79) 99121-4304
+              </a>
+            </p>
+            <p>
+              <a href="mailto:carlossiqueiraborges@gmail.com" target="_blank">
+                <img src="/imagens/Gmail.webp" alt="Gmail" width="20" />
+                carlossiqueiraborges@gmail.com
+              </a>
+            </p>
+            <p>
+              <a href="https://github.com/CarlosSQH" target="_blank">
+                <img src="/imagens/github.png" alt="GitHub" width="20" /> Meu
+                GitHub
+              </a>
+            </p>
+          </div>
+
+          <div class="col-md-4 text-center mb-3">
+            <h5>Links Rápidos</h5>
+            <a href="/index.html" class="d-block">Home</a>
+            <a href="/index.html" class="d-block">Sobre Mim</a>
+            <a href="/index.html" class="d-block">Habilidades</a>
+            <a href="/index.html" class="d-block">Projetos</a>
+            <a href="/contatar.html" class="d-block">Contate-me</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+    crossorigin="anonymous"
+  ></script>
+
+  <script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+  ></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init({
+        publicKey: "pKJA_vLscaxirc5B9",
+      });
+
+      document
+        .getElementById("contatar")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          var params = {
+            from_name: document.querySelector("#nome").value,
+            reply_to: document.querySelector("#email").value,
+            subject: document.querySelector("#mensagem").value,
+            message: document.querySelector("#descricao").value,
+          };
+
+          emailjs
+            .send("service_yossw7b", "template_tq13gko", params)
+
+            .then(
+              function (response) {
+                alert("Seu e-mail foi enviado com sucesso!");
+                document.getElementById("contatar").reset();
+              },
+              function (error) {
+                alert("Erro ao enviar o e-mail: " + JSON.stringify(error));
+              }
+            );
+        });
+    })();
+  </script>
+</html>
